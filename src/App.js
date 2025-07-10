@@ -6,6 +6,7 @@ import ShoppingList from './ShoppingList.js';
 import Greeting from './Greeting.js';
 import Product from './Product.js';
 import BlogPost from './BlogPost.js';
+import WelcomeMessage from './WelcomeMessage.js';
 
 function MyButton(props) {
 
@@ -41,6 +42,10 @@ export default function App() {
       <Product title="Наушники Sony" price={249} />
       <hr />
       <BlogPost title="Введение в React" author="Алекс" likes={120} />
+      <BlogPost title="REACT" author="Joe" likes={22220}/>
+      <hr />
+      <WelcomeMessage username="Дмитрий" />
+
     </div>
   );
 }
