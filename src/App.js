@@ -4,10 +4,16 @@ import './App.css';
 import Profile from './Profile.js';
 import ShoppingList from './ShoppingList.js';
 import Greeting from './Greeting.js';
+import Product from './Product.js';
+import BlogPost from './BlogPost.js';
 
 function MyButton(props) {
+
+  function handleClick() {
+    console.log(`Кликнули по кнопке "${props.text ? props.text : 'Click me'}"`);
+  }
   return (
-    <button>
+    <button onClick={handleClick}>
       {props.text ? props.text : 'Click me'}
     </button>
   );
@@ -21,6 +27,7 @@ export default function App() {
       <MyButton text="Нажми сюда!" />
       <MyButton text="Отправить форму" />
       <hr />
+      <hr />
       <h2>My Profile</h2>
       <Profile />
       <hr />
@@ -30,6 +37,10 @@ export default function App() {
       <Greeting name="Дима" />
       <Greeting name="Мария" />
       <hr />
+      <Product title="iPhone 14" price={999} />
+      <Product title="Наушники Sony" price={249} />
+      <hr />
+      <BlogPost title="Введение в React" author="Алекс" likes={120} />
     </div>
   );
 }
